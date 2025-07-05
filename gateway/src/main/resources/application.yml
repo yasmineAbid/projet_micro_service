@@ -14,15 +14,15 @@ spring:
         - id: medecin-service
           uri: http://localhost:8089
           predicates:
-            - Path=/medecins
             - Path=/medecins/**
 
         - id: patient-service
           uri: http://localhost:9090
           predicates:
-            - Path=/patients
             - Path=/patients/**
 
 logging:
   level:
     org.springframework: DEBUG
+
+    #spring.cloud.gateway.discovery.locator.enabled=true dynamique
